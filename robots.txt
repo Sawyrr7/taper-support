@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sawyrr7.github.io/taper-support/sitemap.xml

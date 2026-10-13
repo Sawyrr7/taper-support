@@ -1,12 +1,856 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=support.html" />
-    <title>Taper</title>
-  </head>
-  <body>
-    <p><a href="support.html">Taper support</a> · <a href="privacy.html">Privacy policy</a></p>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taper: Cut back step by step, then quit vaping or weed</title>
+<meta name="description" content="A gentle iPhone plan that lowers your vape, weed, pouch or cigarette use a little each week, down to zero on a date you choose. Private, no account.">
+<link rel="canonical" href="https://sawyrr7.github.io/taper-support/">
+<meta name="theme-color" content="#06121f">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+<!-- Smart App Banner: iOS Safari shows "View" (or "Open" once installed) at the top of the page. -->
+<meta name="apple-itunes-app" content="app-id=6815674117">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Taper">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://sawyrr7.github.io/taper-support/">
+<meta property="og:title" content="Taper: Cut back step by step, then quit">
+<meta property="og:description" content="A gentle plan that lowers your vape, weed, pouch or cigarette use a little each week, down to zero on a date you choose.">
+<meta property="og:image" content="https://sawyrr7.github.io/taper-support/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Taper's Today screen on an iPhone, next to the words: Cut back step by step, then quit.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Taper: Cut back step by step, then quit">
+<meta name="twitter:description" content="A gentle plan that lowers your vape, weed, pouch or cigarette use a little each week, down to zero on a date you choose.">
+<meta name="twitter:image" content="https://sawyrr7.github.io/taper-support/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="Taper's Today screen on an iPhone, next to the words: Cut back step by step, then quit.">
+
+<script>
+  // Before first paint, so the layout never jumps: motion only without Reduce Motion; Android gets its own note.
+  (function (root) {
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) root.classList.add('js-motion')
+    var hints = navigator.userAgentData
+    if (/Android/i.test(navigator.userAgent) || (hints && hints.platform === 'Android')) root.classList.add('android')
+  })(document.documentElement)
+</script>
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/avif" imagesrcset="assets/screen-today-480.avif 480w, assets/screen-today-880.avif 880w" imagesizes="(min-width: 960px) 282px, 254px" fetchpriority="high">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Taper",
+  "alternateName": "Taper: Quit Weed & Vaping",
+  "description": "A gentle plan that lowers your vape, weed, nicotine pouch or cigarette use a little each week, down to zero on a quit date you choose. Includes craving help, daily check-ins and free help lines. Private by design: no account, and your data stays on your phone.",
+  "operatingSystem": "iOS",
+  "applicationCategory": "HealthApplication",
+  "url": "https://sawyrr7.github.io/taper-support/",
+  "installUrl": "https://apps.apple.com/app/id6815674117",
+  "image": "https://sawyrr7.github.io/taper-support/assets/apple-touch-icon.png",
+  "screenshot": [
+    "https://sawyrr7.github.io/taper-support/assets/screen-today-480.jpg",
+    "https://sawyrr7.github.io/taper-support/assets/screen-plan-480.jpg",
+    "https://sawyrr7.github.io/taper-support/assets/screen-craving-480.jpg",
+    "https://sawyrr7.github.io/taper-support/assets/screen-slip-480.jpg"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to download. The full plan uses Taper Annual: a 1-week free trial, then $29.99 a year in the US."
+  }
+}
+</script>
+
+<style>
+@font-face {
+  font-family: Outfit;
+  src: url(assets/outfit-latin.woff2) format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --night: #06121f;
+  --ink: #fff;
+  --mist: rgb(255 255 255 / 0.84);
+  --mist-2: rgb(255 255 255 / 0.7);
+  --line: rgb(255 255 255 / 0.14);
+  --coral: #ff8a6b;
+  --coral-ink: #2a0d0a;
+  --peach: #ffc29e;
+  --teal: #72f0dd;
+  --focus: #9cc3ff;
+  --fill: linear-gradient(135deg, #ffa585 0%, #ff7a62 55%, #ff5f6d 100%);
+  --font: Outfit, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --gutter: 20px;
+  --section: 52px;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--night) linear-gradient(180deg, #06121f 0%, #071a2c 26%, #0a2440 58%, #12304f 84%, #1b3655 100%);
+  color: var(--mist);
+  font: 400 1.0625rem/1.6 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--peach); text-underline-offset: 0.18em; }
+h1, h2, h3 { margin: 0; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance; }
+h2 { font-size: clamp(2rem, 1.2rem + 3.6vw, 3rem); font-weight: 650; }
+h3 { font-weight: 620; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { width: min(100% - 2 * var(--gutter), 1120px); margin-inline: auto; }
+/* The hero glow spills past the phone; clip it at the screen edge so the page never scrolls sideways. */
+main { overflow-x: clip; }
+.skip {
+  position: absolute; left: 12px; top: -80px; z-index: 10;
+  padding: 12px 16px; border-radius: 12px; background: var(--ink); color: var(--night); font-weight: 600;
+}
+.skip:focus { top: 12px; }
+
+/* Header: the brand only. The page has one goal, so there's no nav. */
+.site-header { display: flex; align-items: center; padding-block: 16px 8px; }
+.brand {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 44px;
+  color: var(--ink); text-decoration: none; font-weight: 650; font-size: 1.25rem; letter-spacing: -0.01em;
+}
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+
+/* Hero */
+.hero { display: grid; gap: 44px; padding-block: 28px 80px; }
+/* The headline tapers: each line is a step smaller and lighter than the one before. */
+.taper { font-size: clamp(3rem, 1.6rem + 7vw, 5.6rem); line-height: 1.02; letter-spacing: -0.035em; }
+.taper span { display: block; }
+.taper span:nth-child(1) { font-weight: 720; }
+.taper span:nth-child(2) { font-size: 0.84em; font-weight: 660; }
+.taper span:nth-child(3) { font-size: 0.7em; font-weight: 600; }
+.taper span:nth-child(4) { font-size: 0.59em; font-weight: 560; }
+.lede { margin-top: 24px; max-width: 30em; font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem); line-height: 1.5; color: var(--mist); }
+.cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 58px; padding: 0 32px; margin-top: 30px; border-radius: 999px;
+  background: var(--fill); color: var(--coral-ink); font-weight: 650; font-size: 1.0625rem; text-decoration: none;
+  box-shadow: 0 16px 36px -14px rgb(255 106 85 / 0.65), inset 0 1px 0 rgb(255 255 255 / 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.cta:hover { box-shadow: 0 20px 44px -14px rgb(255 106 85 / 0.8), inset 0 1px 0 rgb(255 255 255 / 0.5); }
+.cta:active { transform: scale(0.98); }
+.cta:focus-visible { outline-offset: 4px; border-radius: 999px; }
+.fine { margin-top: 14px; max-width: 28em; font-size: 0.9375rem; line-height: 1.5; color: var(--mist); }
+
+/* Phone frame around real screenshots */
+.device {
+  --w: 272px;
+  position: relative; width: var(--w); margin: 0; padding: 9px;
+  border-radius: calc(var(--w) * 0.17);
+  background: linear-gradient(150deg, #64717f 0%, #1d2834 36%, #3a4656 68%, #0f161e 100%);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14), 0 44px 80px -32px rgb(0 0 0 / 0.8);
+}
+.device img { width: 100%; aspect-ratio: 440 / 956; border-radius: calc(var(--w) * 0.17 - 9px); background: #0c1e31; }
+.device::after {
+  content: ""; position: absolute; top: calc(9px + 1.3%); left: 50%; transform: translateX(-50%);
+  width: 29%; height: 3.5%; border-radius: 999px; background: #000;
+}
+.hero-figure { position: relative; isolation: isolate; justify-self: center; margin: 0; }
+.hero-figure::before {
+  content: ""; position: absolute; inset: 8% -30% 4%; z-index: -1;
+  background:
+    radial-gradient(closest-side at 70% 60%, rgb(255 138 107 / 0.3), transparent),
+    radial-gradient(closest-side at 30% 35%, rgb(114 240 221 / 0.16), transparent);
+}
+.hero-figure figcaption { margin-top: 14px; text-align: center; font-size: 0.875rem; color: var(--mist-2); }
+
+/* The problem */
+.problem { display: grid; gap: 24px; padding-block: var(--section); }
+.problem-body { display: grid; gap: 18px; max-width: 34em; font-size: clamp(1.125rem, 1rem + 0.45vw, 1.3125rem); line-height: 1.6; }
+.problem-body p:last-child { color: var(--ink); }
+
+/* How it works: a real sequence, so the steps are numbered */
+.how { padding-block: var(--section); }
+.steps { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 36px; counter-reset: step; }
+.steps li { counter-increment: step; position: relative; padding-left: 64px; }
+.steps li::before {
+  content: counter(step); position: absolute; left: 0; top: -4px;
+  font-size: 2.75rem; font-weight: 300; line-height: 1; color: var(--mist-2);
+}
+.steps h3 { font-size: 1.375rem; line-height: 1.25; }
+.steps p { margin-top: 8px; max-width: 30em; }
+.plan-bars { display: flex; align-items: flex-end; gap: 8px; height: 64px; margin-top: 20px; max-width: 280px; }
+.plan-bars > span { flex: 1; height: var(--h); border-radius: 6px 6px 3px 3px; background: linear-gradient(180deg, #ffb194, #ff7a62); }
+.plan-bars .ease { display: flex; align-items: flex-end; gap: 2px; height: 100%; background: none; }
+.plan-bars .ease i { flex: 1; height: var(--h); border-radius: 3px 3px 2px 2px; background: linear-gradient(180deg, #ffb194, #ff7a62); }
+.plan-bars .zero { flex: 0.6; height: 6px; border-radius: 3px; background: var(--teal); }
+.plan-labels { display: flex; gap: 8px; max-width: 280px; margin-top: 6px; font-size: 0.8125rem; color: var(--mist-2); }
+.plan-labels span { flex: 1; }
+.plan-labels span:last-child { flex: 0.6; white-space: nowrap; }
+
+/* Features with real screens */
+.features { padding-block: var(--section); }
+.feature-list { display: grid; gap: 88px; margin-top: 48px; }
+.feature { display: grid; gap: 32px; align-items: center; }
+.feature h3 { font-size: clamp(1.625rem, 1.2rem + 1.9vw, 2.25rem); }
+.feature p { margin-top: 14px; max-width: 30em; }
+.feature .device { --w: 240px; justify-self: center; }
+
+/* Trust */
+.trust { padding-block: var(--section); }
+.trust-grid { display: grid; gap: 32px; margin-top: 36px; }
+.trust-grid > div { padding-top: 20px; border-top: 1px solid var(--line); }
+.trust-grid h3 { font-size: 1.25rem; line-height: 1.3; }
+.trust-grid p { margin-top: 10px; font-size: 1rem; }
+.trust-grid p + p { margin-top: 12px; }
+
+/* Social proof: real content only */
+.proof { padding-block: var(--section); }
+.placeholder {
+  display: grid; gap: 10px; margin-top: 24px; padding: 20px 22px; max-width: 48rem;
+  border: 1.5px dashed rgb(255 194 158 / 0.65); border-radius: 18px;
+  color: var(--peach); font-size: 0.9375rem;
+}
+
+/* FAQ */
+.faq { padding-block: var(--section); }
+.faq-list { max-width: 50rem; margin-top: 28px; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  min-height: 64px; padding-block: 14px; cursor: pointer; list-style: none;
+  color: var(--ink); font-size: 1.1875rem; font-weight: 600; line-height: 1.3;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; flex: none; width: 11px; height: 11px; margin-right: 6px;
+  border-right: 2px solid var(--peach); border-bottom: 2px solid var(--peach);
+  transform: translateY(-3px) rotate(45deg); transition: transform 0.2s ease;
+}
+.faq details[open] summary::after { transform: translateY(3px) rotate(225deg); }
+.faq .answer { display: grid; gap: 12px; max-width: 40em; padding-bottom: 22px; }
+
+/* Final call to action: first light over the app's mountains. --horizon is where the far ridge crosses the
+   center line at each width (the ridge art crops rather than stretches), so the sun crests it exactly. */
+.final {
+  --horizon: clamp(145px, 12.22vw, 181px);
+  position: relative; overflow: hidden; padding: 104px 0 calc(var(--horizon) + 96px); text-align: center;
+}
+.final .wrap { position: relative; z-index: 1; }
+.final h2 { font-size: clamp(2.25rem, 1.3rem + 4.4vw, 3.75rem); }
+.final p { max-width: 30em; margin: 16px auto 0; text-wrap: balance; }
+.final .fine { margin-top: 14px; color: var(--mist); }
+.dawn, .dawn > * { position: absolute; left: 0; bottom: 0; width: 100%; height: 181px; pointer-events: none; }
+.dawn { bottom: -1px; }
+.dawn .glow {
+  height: 560px; background: radial-gradient(75% 75% at 50% 100%, rgb(255 138 107 / 0.5), transparent 72%);
+  opacity: calc(0.35 + 0.65 * min(1, var(--p, 1) / 0.9));
+}
+/* Zero, again: the same warm-white core and coral halo as the point of light in How it works. */
+.dawn .sun {
+  --core: 12px; --t: clamp(0, (var(--p, 1) - 0.1) / 0.8, 1);
+  left: calc(50% - 120px); bottom: calc(var(--horizon) - 114px); width: 240px; height: 240px;
+  background: radial-gradient(circle, #fff4ea 0 var(--core), rgb(255 205 175 / 0.7) calc(var(--core) + 3px),
+    rgb(255 150 120 / 0.26) 28px, rgb(255 138 107 / 0.08) 70px, transparent 120px);
+  transform: translateY(calc((1 - var(--t) * var(--t) * (3 - 2 * var(--t))) * 48px));
+}
+.dawn .near { transform: translateY(calc((1 - var(--p, 1)) * (1 - var(--p, 1)) * (1 - var(--p, 1)) * 40px)); }
+
+/* Footer */
+.site-footer { background: #071629; }
+.site-footer .wrap { display: grid; gap: 10px; padding-block: 8px 44px; font-size: 0.9375rem; color: var(--mist-2); }
+.site-footer nav { display: flex; flex-wrap: wrap; column-gap: 24px; }
+.site-footer a { display: inline-flex; align-items: center; min-height: 44px; color: var(--mist); }
+
+/* ── 3D and scroll motion. Everything below is gated on .js-motion, which a script in <head> adds only
+   when Reduce Motion is off. Without it (or without JavaScript) the page above is the whole design. ── */
+
+/* Hero: the canvas is centered on the phone, so the 3D phone's first frame sits exactly on the static one. */
+.hero-copy { position: relative; z-index: 1; }
+.hero-stage { position: relative; }
+.hero-gl {
+  position: absolute; left: 50%; top: 50%; width: min(100vw, 620px); height: calc(100% + 220px);
+  transform: translate(-50%, -50%); pointer-events: none; opacity: 0; transition: opacity 0.5s ease;
+}
+.hero-gl canvas { display: block; width: 100%; height: 100%; }
+.hero-stage .device { transition: opacity 0.5s ease; }
+.hero-stage.gl-on .hero-gl { opacity: 1; }
+.hero-stage.gl-on .device { opacity: 0; }
+.hero-figure figcaption { position: relative; z-index: 1; }
+
+/* How it works, still: the steps as a list, with the plan bars after them. */
+.how-grid { display: grid; gap: 36px; }
+.how-gl, .how-week { display: none; }
+.plan-figure { width: min(280px, 100%); }
+.how-week {
+  position: absolute; left: 50%; bottom: 10px; margin: 0; transform: translateX(-50%); white-space: nowrap;
+  padding: 3px 12px; border-radius: 999px; background: rgb(8 29 51 / 0.78);
+  font-size: 0.9375rem; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums;
+}
+
+/* How it works, with motion: the tower stays pinned (a band on phones, a column on wide screens) while the
+   steps scroll past as ordinary text. The canvas is pinned, never the words. Only where there's room. */
+@media (min-height: 500px) {
+  .js-motion .how-grid { display: flex; flex-direction: column; gap: 0; }
+  .js-motion .how-visual {
+    order: -1; position: sticky; top: 0; z-index: 1; height: 46vh; height: 46svh;
+    margin-inline: calc(var(--gutter) * -1); background: #081d33;
+  }
+  .js-motion .how-visual::after {
+    content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 28px;
+    background: linear-gradient(#081d33, transparent); pointer-events: none;
+  }
+  .js-motion .how-gl { display: block; position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.6s ease; }
+  .js-motion .how-visual.gl-on .how-gl { opacity: 1; }
+  .js-motion .plan-figure { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: opacity 0.4s ease; }
+  .js-motion .how-visual.gl-on .plan-figure { opacity: 0; transition-duration: 0.1s; }
+  .js-motion .how-visual.gl-on .how-week { display: block; }
+  .js-motion .how-copy { padding-top: 28px; }
+  .js-motion .steps li { min-height: 56vh; min-height: 56svh; }
+}
+
+/* Feature phones settle from a slight turn as they arrive. No fade and no slide, so the screen reads throughout.
+   A ring of light opens under each one as it lands, carrying the rings through the middle of the page. */
+.feature .device { isolation: isolate; }
+.feature .device::before {
+  content: ""; position: absolute; z-index: -1; left: -18%; right: -18%; bottom: -3%; height: 11%;
+  border: 1px solid rgb(255 138 107 / 0.55); border-radius: 50%; box-shadow: 0 0 26px rgb(255 138 107 / 0.28);
+  transform: scale(calc(0.55 + 0.45 * var(--p, 1))); opacity: calc(0.15 + 0.85 * var(--p, 1));
+}
+.js-motion .feature .device {
+  --r: calc((1 - var(--p, 1)) * (1 - var(--p, 1)) * (1 - var(--p, 1)));
+  transform: perspective(1000px) translateZ(calc(var(--r) * var(--depth, -48px)))
+    rotateY(calc(var(--r) * var(--turn, 0deg))) rotateX(calc(var(--r) * var(--tilt, 10deg)));
+}
+
+/* Android: Taper is on iPhone for now, so Android visitors get a quiet status, not a button they can't use.
+   Coral stays reserved for things you can tap. */
+.soon, .for-android, .android .cta, .android .for-ios { display: none; }
+.android .for-android { display: block; }
+.android .soon {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 48px; margin-top: 30px; padding: 0 20px;
+  border: 1px solid rgb(255 255 255 / 0.24); border-radius: 999px; background: rgb(255 255 255 / 0.06);
+  color: var(--ink); font-weight: 600; cursor: default;
+}
+.soon::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+
+/* FAQ answers ease in when opened. */
+@media (prefers-reduced-motion: no-preference) {
+  .faq details[open] .answer { animation: answer-in 180ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+  @keyframes answer-in { from { opacity: 0; transform: translateY(-4px); } }
+}
+
+@media (max-width: 599px) {
+  .cta { width: 100%; margin-top: 18px; min-height: 54px; }
+  .site-header { padding-block: 8px 0; }
+  .hero { padding-block: 16px 72px; }
+  .taper { font-size: 2.75rem; }
+  .lede { margin-top: 14px; font-size: 1.0625rem; line-height: 1.45; }
+  .fine { margin-top: 10px; font-size: 0.875rem; }
+}
+/* Phones, pinned How it works: each step holds under the band until the next arrives (no empty stretches),
+   the band blends into the page above it, and the week reads as a heading in the band's quiet corner. */
+@media (max-width: 859px) and (min-height: 500px) {
+  .js-motion .how { background: linear-gradient(rgb(8 29 51 / 0), #081d33 56px, #081d33 calc(100% - 56px), rgb(8 29 51 / 0)); }
+  /* The incoming step fades in over the one before it instead of cutting it with a hard edge. */
+  .js-motion .steps li {
+    position: sticky; top: calc(46vh + 4px); top: calc(46svh + 4px); padding-top: 34px;
+    background: linear-gradient(rgb(8 29 51 / 0), #081d33 24px);
+  }
+  .js-motion .steps li::before { top: 30px; }
+  /* Let the band go exactly when the last step would be pushed, so they leave together and that step never
+     slides under the band. The negative margin ends the band's pinning early; the padding restores the space. */
+  .js-motion .how-copy { margin-bottom: calc(-56vh - 4px); margin-bottom: calc(-56svh - 4px); }
+  .js-motion .how { padding-bottom: calc(var(--section) + 56vh + 4px); padding-bottom: calc(var(--section) + 56svh + 4px); }
+  .js-motion .how-visual::before {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 56px;
+    background: linear-gradient(rgb(8 29 51 / 0), #081d33); pointer-events: none;
+  }
+  .js-motion .how-visual.gl-on .how-week {
+    top: 16px; bottom: auto; left: 20px; transform: none; padding: 0; background: none; font-size: 1.375rem; font-weight: 600;
+    text-shadow: 0 0 2px #081d33, 0 1px 14px #081d33;
+  }
+}
+@media (min-width: 860px) {
+  :root { --section: 84px; }
+  .feature { grid-template-columns: 1fr 1fr; gap: 64px; }
+  .feature:nth-child(even) .feature-copy { order: 2; }
+  .feature .device { --w: 270px; }
+  .trust-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .steps { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  /* On wide screens the three steps step down, like the plan. */
+  .steps li:nth-child(2) { margin-top: 32px; }
+  .steps li:nth-child(3) { margin-top: 64px; }
+  .js-motion .feature .device { --tilt: 6deg; --turn: -14deg; }
+  .js-motion .feature:nth-child(even) .device { --turn: 14deg; }
+  .dawn .sun { --core: 14px; bottom: calc(var(--horizon) - 106px); }
+}
+@media (min-width: 860px) and (min-height: 500px) {
+  /* Pinned on wide screens: the steps scroll on the left, the tower holds in its own column on the right. */
+  .js-motion .how-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+  .js-motion .how-visual {
+    order: 0; top: max(10vh, calc(50vh - 330px)); height: min(76vh, 660px); margin-inline: 0; background: none;
+  }
+  .js-motion .how-visual::after { display: none; }
+  .js-motion .how-copy { padding-top: 0; }
+  .js-motion .steps { grid-template-columns: none; gap: 0; margin-top: 36px; }
+  /* Each step sits in the middle of its stretch of scroll, so it's on screen while its part of the tower plays. */
+  .js-motion .steps li { display: grid; grid-template-columns: 64px 1fr; align-content: center; margin-top: 0; padding-left: 0; min-height: 92vh; }
+  .js-motion .steps li::before { position: static; grid-row: 1 / span 2; }
+  .js-motion .steps li > * { grid-column: 2; }
+}
+@media (min-width: 960px) {
+  .hero { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); align-items: center; gap: 56px; padding-block: 16px 112px; }
+  .hero .device { --w: 300px; }
+  .hero-figure figcaption { position: absolute; left: 0; right: 0; top: 100%; margin-top: 76px; }
+  .problem { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header wrap">
+  <a class="brand" href="./">
+    <picture>
+      <source srcset="assets/icon-96.avif" type="image/avif">
+      <img src="assets/icon-96.png" width="36" height="36" alt="">
+    </picture>
+    Taper
+  </a>
+</header>
+
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title" data-p="exit">
+    <div class="hero-copy">
+      <h1 id="hero-title" class="taper"><span>Cut back</span> <span>step by step,</span> <span>then quit.</span></h1>
+      <p class="lede" id="hero-sub">Taper builds a plan from what you use now and lowers it a little each week, down to zero on a date you choose.</p>
+      <script>
+        // Headline and subhead A/B test (options and reasoning in COPY.md). ?h=1–3 and ?s=1–3 choose a pair,
+        // which is also how an ad keeps its message on the page. With TEST on, each visit gets a random pair.
+        // Nothing is stored on the device.
+        (function () {
+          var TEST = false
+          var H = [
+            ['Cut back', 'step by step,', 'then quit.'],
+            ['Cut back', 'gradually and', 'feel better', 'doing it.'],
+            ['Quit', 'without going', 'cold turkey.']
+          ]
+          var S = [
+            'Taper builds a plan from what you use now and lowers it a little each week, down to zero on a date you choose.',
+            'A gentle weekly plan for vapes, weed, pouches or cigarettes, built to make each step down easier to handle.',
+            'Small weekly steps, help when a craving hits, and no judgment on rough days. Private, with no account.'
+          ]
+          var q = new URLSearchParams(location.search)
+          function pick(key, n) {
+            var v = parseInt(q.get(key), 10)
+            return v >= 1 && v <= n ? v : TEST ? 1 + Math.floor(Math.random() * n) : 1
+          }
+          var h = pick('h', H.length)
+          var s = pick('s', S.length)
+          window.taperVariant = 'h' + h + 's' + s
+          if (h > 1) {
+            var el = document.getElementById('hero-title')
+            el.textContent = ''
+            H[h - 1].forEach(function (line, i) {
+              if (i) el.appendChild(document.createTextNode(' '))
+              var span = document.createElement('span')
+              span.textContent = line
+              el.appendChild(span)
+            })
+          }
+          if (s > 1) document.getElementById('hero-sub').textContent = S[s - 1]
+        })()
+      </script>
+      <a class="cta" href="https://apps.apple.com/app/id6815674117" data-cta="hero">Download on the App Store</a>
+      <!-- Android visitors (marked in <head>, before first paint) get a status instead of a button they can't use. -->
+      <p class="soon">Coming to Android</p>
+      <p class="fine for-ios">Free to download for iPhone. The first week of your plan is free, then $29.99 a year. Cancel anytime.</p>
+      <p class="fine for-android">Taper is on iPhone for now. An Android version is on the way, with no date yet. When it’s ready, the link will be right here.</p>
+    </div>
+    <figure class="hero-figure">
+      <div class="hero-stage">
+        <!-- The 3D phone and ring tower draw here once they load; the static phone below stays as the fallback. -->
+        <div class="hero-gl" aria-hidden="true"><canvas></canvas></div>
+        <div class="device">
+          <picture>
+            <source type="image/avif" srcset="assets/screen-today-480.avif 480w, assets/screen-today-880.avif 880w" sizes="(min-width: 960px) 282px, 254px">
+            <img src="assets/screen-today-480.jpg" width="440" height="956" fetchpriority="high"
+              alt="Taper's Today screen for a nicotine vape plan: 24 puffs left today, week 2, day 10, 19 days to zero, and the next step down on Sunday, to 30 puffs.">
+          </picture>
+        </div>
+      </div>
+      <figcaption>Real app screens, shown with sample data.</figcaption>
+    </figure>
+  </section>
+
+  <section class="problem wrap" aria-labelledby="problem-title">
+    <h2 id="problem-title">Quitting cold is rough.</h2>
+    <div class="problem-body">
+      <p>You’ve probably tried stopping all at once. The first days hit hardest: the cravings, the short fuse, the nights you can’t sleep.</p>
+      <p>Then one bad evening you pick it back up, and it feels like you’re back at day one.</p>
+      <p>It usually isn’t about willpower. It’s the withdrawal, and the feeling that one slip wipes out everything. Taper is built around both.</p>
+    </div>
+  </section>
+
+  <!-- With motion, the tower stays pinned (a band on phones, a column on wide screens) while the steps scroll past. -->
+  <section class="how" aria-labelledby="how-title" data-p="pin">
+    <div class="wrap how-grid">
+      <div class="how-copy">
+        <h2 id="how-title">How Taper works</h2>
+          <ol class="steps">
+            <li>
+              <h3>Tell Taper what you use</h3>
+              <p>Weed, THC vapes, nicotine vapes, nicotine pouches or cigarettes, and about how much on a usual day. Not sure? Log for a few days first and let Taper measure.</p>
+            </li>
+            <li>
+              <h3>Get a plan that steps down to zero</h3>
+              <p>Your daily amount drops a little each week, your first use of the day moves later, and you choose the quit date, 2 to 6 weeks out.</p>
+            </li>
+            <li>
+              <h3>Take it one day at a time</h3>
+              <p>Tap to log, glance at today’s limit, and open the craving toolkit when it gets hard. Rough week? Hold a step.</p>
+            </li>
+          </ol>
+      </div>
+      <div class="how-visual">
+        <canvas class="how-gl" aria-hidden="true"></canvas>
+          <div class="plan-figure">
+            <div class="plan-bars" role="img" aria-label="An example plan: the daily amount drops each week, eases down a little each day in the last week, and reaches zero on quit day.">
+              <span style="--h: 100%"></span>
+              <span style="--h: 76%"></span>
+              <span style="--h: 52%"></span>
+              <span class="ease"><i style="--h: 40%"></i><i style="--h: 34%"></i><i style="--h: 28%"></i><i style="--h: 22%"></i><i style="--h: 16%"></i><i style="--h: 11%"></i><i style="--h: 6%"></i></span>
+              <span class="zero"></span>
+            </div>
+            <div class="plan-labels" aria-hidden="true"><span>Week 1</span><span>2</span><span>3</span><span>4</span><span>Quit day</span></div>
+          </div>
+        <p class="how-week" aria-hidden="true">Where you start</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features wrap" aria-labelledby="features-title">
+    <h2 id="features-title">Made for the hard parts</h2>
+    <div class="feature-list">
+      <article class="feature" data-p="enter">
+        <div class="feature-copy">
+          <h3>See every step before you start</h3>
+          <p>Your plan shows each week’s limit, the earliest time for your first use, and the day you reach zero. With nicotine, strength steps down in its own weeks, never in the same week as your limit.</p>
+        </div>
+        <div class="device">
+          <picture>
+            <source type="image/avif" srcset="assets/screen-plan-480.avif 480w, assets/screen-plan-880.avif 880w" sizes="(min-width: 860px) 252px, 222px">
+            <img src="assets/screen-plan-480.jpg" width="440" height="956" loading="lazy" decoding="async"
+              alt="Plan details for a nicotine vape plan: from 200 puffs a day to zero by Sunday, November 1. Weekly limits of 40, 40 and 30 puffs, then a last week that eases from 26 down to 4, and a strength step-down from 50 to 35 mg/ml.">
+          </picture>
+        </div>
+      </article>
+      <article class="feature" data-p="enter">
+        <div class="feature-copy">
+          <h3>Something to do when a craving hits</h3>
+          <p>Breathe along with a 4-7-8 guide, start a 10-minute timer, and see the reason you wrote down. The craving toolkit and help lines are always free.</p>
+        </div>
+        <div class="device">
+          <picture>
+            <source type="image/avif" srcset="assets/screen-craving-480.avif 480w, assets/screen-craving-880.avif 880w" sizes="(min-width: 860px) 252px, 222px">
+            <img src="assets/screen-craving-480.jpg" width="440" height="956" loading="lazy" decoding="async"
+              alt="The craving toolkit, titled Let it pass: a 4-7-8 breathing guide on Breathe out, a 10-minute craving timer at 9:48, the person's own reason for quitting, and a suggestion to eat something crunchy.">
+          </picture>
+        </div>
+      </article>
+      <article class="feature" data-p="enter">
+        <div class="feature-copy">
+          <h3>A bad day doesn’t erase your progress</h3>
+          <p>Go over your limit and Taper asks what was going on, keeps the days you already did, and lets you carry on or hold your step for another week.</p>
+        </div>
+        <div class="device">
+          <picture>
+            <source type="image/avif" srcset="assets/screen-slip-480.avif 480w, assets/screen-slip-880.avif 880w" sizes="(min-width: 860px) 252px, 222px">
+            <img src="assets/screen-slip-480.jpg" width="440" height="956" loading="lazy" decoding="async"
+              alt="The screen after going over a limit, titled It happens: one day doesn't undo your progress. It notes 2 days on track before today, asks what was going on, and offers to keep going with the plan or hold this step another week.">
+          </picture>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="trust wrap" aria-labelledby="trust-title">
+    <h2 id="trust-title">Before you start</h2>
+    <div class="trust-grid">
+      <div>
+        <h3>Your data stays on your phone</h3>
+        <p>No account, no ads, no tracking. Your plan, logs and check-ins are saved only on your iPhone, and Taper has no server to send them to. Its App Store privacy label reads Data Not Collected.</p>
+        <p><a href="https://sawyrr7.github.io/taper-support/privacy.html">Read the privacy policy</a></p>
+      </div>
+      <div>
+        <h3>Check with a doctor if you need to</h3>
+        <p>Taper is general wellness support, not medical advice. If you’re pregnant, take prescription medicine, or have a heart or mental health condition, talk to a doctor or pharmacist before you change how much you use.</p>
+        <p>If withdrawal feels severe or your mood drops, get help. Free help lines are built into the app. In a crisis, call your local emergency number, or in the US call or text <a href="tel:988">988</a>.</p>
+      </div>
+      <div>
+        <h3>What Taper isn’t</h3>
+        <p>It isn’t a medical treatment, and it isn’t for alcohol, benzodiazepines or opioids, where stopping without medical help can be dangerous.</p>
+        <p>It isn’t a shortcut, either. On average, cutting down first and quitting all at once work about as well. Taper is for people who’d rather get to zero step by step. <a href="https://sawyrr7.github.io/taper-support/research.html">The research behind Taper</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof wrap" aria-labelledby="proof-title">
+    <h2 id="proof-title">What people say</h2>
+    <div class="placeholder" data-placeholder>
+      <p>[PLACEHOLDER: App Store rating and number of ratings. Add only once Taper has real ratings.]</p>
+      <p>[PLACEHOLDER: one to three short quotes from real users who gave written permission, first name only.]</p>
+    </div>
+  </section>
+
+  <section class="faq wrap" aria-labelledby="faq-title">
+    <h2 id="faq-title">Questions</h2>
+    <div class="faq-list">
+      <details data-faq="free">
+        <summary>Is it free?</summary>
+        <div class="answer">
+          <p>Taper is free to download. The measuring days before your plan, the sample data, and the craving toolkit with help lines are always free.</p>
+          <p>The full plan needs Taper Annual. The first week is free, then it’s $29.99 a year in the US (prices vary by country). It renews unless you cancel at least 24 hours before the free week or the year ends, and you can cancel any time in Taper’s Settings or in your iPhone’s Subscriptions.</p>
+        </div>
+      </details>
+      <details data-faq="safe">
+        <summary>Is it safe?</summary>
+        <div class="answer">
+          <p>Cutting down before you quit is a well-studied approach, and on average it works about as well as stopping all at once. Taper is general wellness support, not medical advice.</p>
+          <p>Talk to a doctor or pharmacist first if you’re pregnant, take prescription medicine, or have a heart or mental health condition. Get help if withdrawal feels severe or your mood drops. Taper isn’t for alcohol, benzodiazepines or opioids.</p>
+        </div>
+      </details>
+      <details data-faq="stop-completely">
+        <summary>Do I need to stop completely?</summary>
+        <div class="answer">
+          <p>That’s where every Taper plan ends: zero, on a quit date you pick 2 to 6 weeks out. You can start with 3 to 7 measuring days, logging as usual with no limits, so your plan begins from your real numbers.</p>
+          <p>If you’d rather cut down and stay there, Taper isn’t built for that.</p>
+        </div>
+      </details>
+      <details data-faq="slip">
+        <summary>What if I slip?</summary>
+        <div class="answer">
+          <p>It happens, and it doesn’t wipe out your progress. Taper asks what was going on, shows your own plan for that moment, and lets you keep going or hold your current step for another week (up to twice per plan).</p>
+          <p>After quit day, you go straight back to zero, and the days you already had still count. If use has come back on several days, you can ease down again with a short taper.</p>
+        </div>
+      </details>
+      <details data-faq="offline">
+        <summary>Does it work offline?</summary>
+        <div class="answer">
+          <p>Yes. Your plan, logs, check-ins and reminders all live on your phone, with no account and no internet needed. Taper only goes online when you subscribe or restore a purchase, which Apple handles.</p>
+        </div>
+      </details>
+      <details data-faq="habits">
+        <summary>Which habits and phones does it work with?</summary>
+        <div class="answer">
+          <p>Weed (in grams or hits), THC vapes, nicotine vapes, nicotine pouches and cigarettes. You can taper more than one at once, and each gets its own plan.</p>
+          <p>Taper is on iPhone for now. An Android version is on the way, with no date yet. When it’s ready, the download link will be on this page.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="final-title">
+    <div class="wrap">
+      <h2 id="final-title">Your first step can be a small one.</h2>
+      <p>Tell Taper what you use and see your whole plan before you pay anything.</p>
+      <a class="cta" href="https://apps.apple.com/app/id6815674117" data-cta="final">Download on the App Store</a>
+      <!-- Android visitors (marked in <head>, before first paint) get a status instead of a button they can't use. -->
+      <p class="soon">Coming to Android</p>
+      <p class="fine for-ios">Free to download for iPhone. The first week of your plan is free, then $29.99 a year. Cancel anytime.</p>
+      <p class="fine for-android">Taper is on iPhone for now. An Android version is on the way, with no date yet. When it’s ready, the link will be right here.</p>
+    </div>
+    <!-- First light: the sky warms, the near ridge settles and zero crests the far ridge like the sun. -->
+    <div class="dawn" data-p="enter" data-p-end="0.55" aria-hidden="true">
+      <div class="glow"></div>
+      <div class="sun"></div>
+      <svg class="far" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" focusable="false"><path d="M0 96 L120 70 L240 88 L380 36 L510 72 L650 26 L790 62 L930 38 L1060 70 L1200 30 L1330 60 L1440 44 V220 H0 Z" fill="#112946" /></svg>
+      <svg class="near" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" focusable="false"><path d="M0 156 L150 128 L310 150 L470 118 L650 146 L820 122 L1000 144 L1170 120 L1320 140 L1440 128 V220 H0 Z" fill="#071629" /></svg>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Taper is general wellness support, not medical advice.</p>
+    <nav aria-label="More about Taper">
+      <a href="https://sawyrr7.github.io/taper-support/support.html">Support</a>
+      <a href="https://sawyrr7.github.io/taper-support/privacy.html">Privacy</a>
+      <a href="https://sawyrr7.github.io/taper-support/research.html">The research</a>
+    </nav>
+    <p>© 2026 Taper</p>
+  </div>
+</footer>
+
+<script>
+  // Scroll-linked motion. Each [data-p] element gets --p from 0 to 1 for the CSS above:
+  //   enter: from when its top meets the bottom of the screen until its top reaches data-p-end (default 0.35)
+  //          of the way down, or the end of the page, whichever comes first;
+  //   exit:  as it scrolls away;   pin: across a section whose inside part stays pinned.
+  // The 3D reads the same numbers. Nothing runs with Reduce Motion (no .js-motion class), and every
+  // CSS rule falls back to its finished, still state when --p isn't set.
+  (function () {
+    var root = document.documentElement
+    var subs = []
+    var values = new Map()
+    var get = function (el) { return values.get(el) || 0 }
+    window.taperMotion = { subscribe: function (fn) { subs.push(fn); fn(get) } }
+    if (!root.classList.contains('js-motion')) return
+
+    var els = [].slice.call(document.querySelectorAll('[data-p]'))
+    var vw = 0
+    var vh = 0
+    var queued = false
+    function progress(el, r, y, max) {
+      var mode = el.getAttribute('data-p')
+      if (mode === 'exit') return -r.top / (r.height * 0.9)
+      if (mode === 'pin') return -r.top / Math.max(1, r.height - vh)
+      var top = r.top + y
+      var end = Math.min(top - parseFloat(el.getAttribute('data-p-end') || '0.35') * vh, max)
+      var start = Math.min(top - vh, end - 240)
+      return (y - start) / (end - start)
+    }
+    function measure() {
+      queued = false
+      // Keep the screen height steady while Safari's toolbar slides in and out, so nothing jumps.
+      var h = root.clientHeight
+      if (innerWidth !== vw || Math.abs(h - vh) > 150) { vw = innerWidth; vh = h }
+      var y = window.scrollY
+      var max = root.scrollHeight - innerHeight
+      var rects = els.map(function (el) { return el.getBoundingClientRect() })
+      els.forEach(function (el, i) {
+        var p = Math.min(1, Math.max(0, progress(el, rects[i], y, max)))
+        if (values.get(el) === p) return
+        values.set(el, p)
+        el.style.setProperty('--p', p.toFixed(4))
+      })
+      subs.forEach(function (fn) { fn(get) })
+    }
+    function queue() {
+      if (queued) return
+      queued = true
+      requestAnimationFrame(measure)
+    }
+    addEventListener('scroll', queue, { passive: true })
+    addEventListener('resize', queue)
+    if (document.fonts) document.fonts.ready.then(queue)
+    queue()
+
+    // Turning on Reduce Motion mid-visit hands everything back to the still page right away.
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)')
+    var still = function () {
+      if (!reduce.matches) return
+      removeEventListener('scroll', queue)
+      root.classList.remove('js-motion')
+      els.forEach(function (el) { el.style.removeProperty('--p') })
+      if (window.taperStop) window.taperStop()
+    }
+    if (reduce.addEventListener) reduce.addEventListener('change', still)
+
+    // How it works: the week under the tower, in step with the 3D (five drops across the plan).
+    var how = document.querySelector('.how')
+    var visual = document.querySelector('.how-visual')
+    var week = document.querySelector('.how-week')
+    window.taperMotion.subscribe(function (p) {
+      var q = p(how)
+      var label = q < 0.25 ? 'Where you start' : q < 0.66 ? 'Week ' + Math.max(1, Math.min(6, 1 + Math.floor((q - 0.27) / 0.074))) : 'Quit day'
+      if (week.textContent !== label) week.textContent = label
+    })
+
+    // The 3D loads after everything else, when the browser is idle, and only where it can run well.
+    if (navigator.connection && navigator.connection.saveData) return
+    var probe = document.createElement('canvas').getContext('webgl2')
+    if (!probe) return
+    var lose = probe.getExtension('WEBGL_lose_context')
+    if (lose) lose.loseContext()
+    function load() {
+      import('./assets/js/scene.js?v=7')
+        .then(function (m) {
+          return m.start({
+            hero: {
+              canvas: document.querySelector('.hero-gl canvas'),
+              img: document.querySelector('.hero-stage img'),
+              stage: document.querySelector('.hero-stage'),
+              section: document.querySelector('.hero'),
+            },
+            how: { canvas: document.querySelector('.how-gl'), stage: visual, track: how },
+            motion: window.taperMotion,
+          })
+        })
+        .then(function (stop) { window.taperStop = stop })
+        .catch(function () {})
+    }
+    var idle = window.requestIdleCallback || function (fn) { setTimeout(fn, 200) }
+    if (document.readyState === 'complete') idle(load)
+    else addEventListener('load', function () { idle(load) }, { once: true })
+  })()
+</script>
+<script>
+  // Event tracking for the funnel in ANALYTICS_PLAN.md. No cookies, nothing stored on the device, and
+  // nothing about what someone uses: events carry only the button's place on the page and the copy variant.
+  (function () {
+    // A Plausible-compatible events endpoint, e.g. "https://plausible.io/api/event". Empty sends nothing.
+    var ANALYTICS = { endpoint: '', domain: 'sawyrr7.github.io' }
+    // [PLACEHOLDER: provider token from App Store Connect > Apps > Analytics > Acquisition > Campaign links.]
+    // With it, App Store Connect reports product page views and downloads per button and per copy variant.
+    var PROVIDER_TOKEN = ''
+    // The provider's own pageview is the landing view, so its dashboards keep sources and UTM tags.
+    var NAMES = { landing_view: 'pageview' }
+    var variant = window.taperVariant || 'h1s1'
+
+    function pageUrl() {
+      // Keep only campaign tags, so nothing else in a shared link is ever sent.
+      var u = new URL(location.href)
+      var keep = new URLSearchParams()
+      u.searchParams.forEach(function (v, k) { if (/^utm_/.test(k)) keep.set(k, v) })
+      u.search = keep.toString()
+      u.hash = ''
+      return u.toString()
+    }
+
+    function track(name, props) {
+      props = Object.assign({ variant: variant }, props)
+      if (!ANALYTICS.endpoint) {
+        if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) console.info('[track]', name, props)
+        return
+      }
+      var body = JSON.stringify({ name: NAMES[name] || name, url: pageUrl(), domain: ANALYTICS.domain, referrer: document.referrer || null, props: props })
+      if (!(navigator.sendBeacon && navigator.sendBeacon(ANALYTICS.endpoint, body))) {
+        fetch(ANALYTICS.endpoint, { method: 'POST', body: body, keepalive: true, headers: { 'Content-Type': 'text/plain' } }).catch(function () {})
+      }
+    }
+
+    // Which store a visitor could use: sizes Android demand before that version ships. Not personal.
+    var platform = /Android/i.test(navigator.userAgent) ? 'android' : /iPhone|iPad|iPod/i.test(navigator.userAgent) ? 'ios' : 'other'
+    track('landing_view', { platform: platform })
+    document.querySelectorAll('[data-cta]').forEach(function (a) {
+      if (PROVIDER_TOKEN) {
+        var u = new URL(a.href)
+        u.searchParams.set('pt', PROVIDER_TOKEN)
+        u.searchParams.set('ct', 'web-' + a.getAttribute('data-cta') + '-' + variant)
+        u.searchParams.set('mt', '8')
+        a.href = u.toString()
+      }
+      a.addEventListener('click', function () { track('cta_tap', { location: a.getAttribute('data-cta') }) })
+    })
+    document.querySelectorAll('details[data-faq]').forEach(function (d) {
+      d.addEventListener('toggle', function () { if (d.open) track('faq_open', { question: d.getAttribute('data-faq') }) })
+    })
+  })()
+</script>
+</body>
 </html>
